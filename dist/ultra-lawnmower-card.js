@@ -4,8 +4,8 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 import { until } from "https://unpkg.com/lit-html@1.4.1/directives/until.js?module";
-import { version, setVersion } from "./version.js?v=4";
-setVersion("V1.0.4");
+import { version, setVersion } from "./version.js?v=5";
+setVersion("V1.0.5");
 
 const sensorModule = await import("./sensors.js?v=" + version);
 const {

@@ -3,7 +3,7 @@ import {
   LitElement,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
-class StateDropdown extends LitElement {
+class UltraLawnMowerStateDropdown extends LitElement {
   static get properties() {
     return {
       hass: { type: Object },
@@ -205,7 +205,7 @@ class StateDropdown extends LitElement {
       [`${this.stateType}State`]: newValue,
     };
 
-    const event = new CustomEvent("state-dropdown-changed", {
+    const event = new CustomEvent("ultra-lawnmower-state-dropdown-changed", {
       detail: {
         config: newConfig,
         entityId: this.entityId,
@@ -230,4 +230,4 @@ class StateDropdown extends LitElement {
   }
 }
 
-customElements.define("state-dropdown", StateDropdown);
+customElements.define("ultra-lawnmower-state-dropdown", UltraLawnMowerStateDropdown);

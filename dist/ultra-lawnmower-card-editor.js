@@ -3,8 +3,8 @@ import {
   html,
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
-import { version } from "./version.js?v=39";
-import "./state-dropdown.js";
+import { version } from "./version.js?v=6";
+import "./ultra-lawnmower-state-dropdown.js";
 
 const stl = await import("./styles.js?v=" + version);
 const loc = await import("./localize.js?v=" + version);
@@ -280,7 +280,7 @@ export class UltraLawnMowerCardEditor extends localize(LitElement) {
           width: 100%;
         }
 
-        state-dropdown {
+        ultra-lawnmower-state-dropdown {
           display: block !important;
           width: 100%;
           margin-top: 8px;
@@ -1447,17 +1447,17 @@ export class UltraLawnMowerCardEditor extends localize(LitElement) {
               >${inactiveIcon === "no-icon" ? "✓ " : ""}${this.localize(
       "editor.no_icon"
     )}</mwc-button>
-              <state-dropdown
+              <ultra-lawnmower-state-dropdown
                 .hass=${this.hass}
                 .config=${this.config.custom_icons?.[entityId] || {}}
                 .entityId=${entityId}
                 .stateType=${"inactive"}
                 .localize=${this.localize}
-                @state-dropdown-changed=${this._handleStateConfigChange}
+                @ultra-lawnmower-state-dropdown-changed=${this._handleStateConfigChange}
                 @template-selected=${(e) =>
                   this._handleTemplateSelected(e, entityId, "inactive")}
                 ?disableDropdown=${isActiveTemplate}
-              ></state-dropdown>
+              ></ultra-lawnmower-state-dropdown>
             </div>
             <div class="editor-item">
               <label>${this.localize("editor.active_icon")}</label>
@@ -1473,17 +1473,17 @@ export class UltraLawnMowerCardEditor extends localize(LitElement) {
               >${activeIcon === "no-icon" ? "✓ " : ""}${this.localize(
       "editor.no_icon"
     )}</mwc-button>
-              <state-dropdown
+              <ultra-lawnmower-state-dropdown
                 .hass=${this.hass}
                 .config=${this.config.custom_icons?.[entityId] || {}}
                 .entityId=${entityId}
                 .stateType=${"active"}
                 .localize=${this.localize}
-                @state-dropdown-changed=${this._handleStateConfigChange}
+                @ultra-lawnmower-state-dropdown-changed=${this._handleStateConfigChange}
                 @template-selected=${(e) =>
                   this._handleTemplateSelected(e, entityId, "active")}
                 ?disableDropdown=${isInactiveTemplate}
-              ></state-dropdown>
+              ></ultra-lawnmower-state-dropdown>
             </div>
           </div>
           <div class="editor-row">
@@ -1600,7 +1600,7 @@ export class UltraLawnMowerCardEditor extends localize(LitElement) {
   _handleTemplateSelected(e, entityId, stateType) {
     const otherStateType = stateType === "active" ? "inactive" : "active";
     const otherDropdown = this.shadowRoot.querySelector(
-      `state-dropdown[data-entity-id="${entityId}"][data-state-type="${otherStateType}"]`
+      `ultra-lawnmower-state-dropdown[data-entity-id="${entityId}"][data-state-type="${otherStateType}"]`
     );
 
     if (otherDropdown) {

@@ -5,7 +5,7 @@ import {
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 import { until } from "https://unpkg.com/lit-html@1.4.1/directives/until.js?module";
 import { version, setVersion } from "./version.js?v=39";
-setVersion("V1.6.9-beta1");
+setVersion("V1.0.1");
 
 const sensorModule = await import("./sensors.js?v=" + version);
 const {

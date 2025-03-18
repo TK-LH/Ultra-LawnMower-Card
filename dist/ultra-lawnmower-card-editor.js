@@ -40,7 +40,7 @@ const debounce = (func, wait) => {
   };
 };
 
-export class UltraVehicleCardEditor extends localize(LitElement) {
+export class UltraLawnMowerCardEditor extends localize(LitElement) {
   static get properties() {
     return {
       hass: { type: Object },
@@ -585,8 +585,8 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
       barFillColor: "",
       limitIndicatorColor: "",
       iconActiveColor:
-        UltraVehicleCardEditor._getComputedColor("--primary-color"),
-      iconInactiveColor: UltraVehicleCardEditor._getComputedColor(
+        UltraLawnMowerCardEditor._getComputedColor("--primary-color"),
+      iconInactiveColor: UltraLawnMowerCardEditor._getComputedColor(
         "--primary-text-color"
       ),
       carStateTextColor: "",
@@ -1358,10 +1358,10 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
     const buttonStyle = this._iconStyles[entityId] || "icon";
     const activeColor =
       customIcon.activeColor ||
-      UltraVehicleCardEditor._getComputedColor("--primary-color");
+      UltraLawnMowerCardEditor._getComputedColor("--primary-color");
     const inactiveColor =
       customIcon.inactiveColor ||
-      UltraVehicleCardEditor._getComputedColor("--primary-text-color");
+      UltraLawnMowerCardEditor._getComputedColor("--primary-text-color");
 
     return html`
       <div
@@ -1415,10 +1415,10 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
     const buttonStyle = this._iconStyles[entityId] || "icon";
     const activeColor =
       customIcon.activeColor ||
-      UltraVehicleCardEditor._getComputedColor("--primary-color");
+      UltraLawnMowerCardEditor._getComputedColor("--primary-color");
     const inactiveColor =
       customIcon.inactiveColor ||
-      UltraVehicleCardEditor._getComputedColor("--primary-text-color");
+      UltraLawnMowerCardEditor._getComputedColor("--primary-text-color");
     const isActiveTemplate = this._isTemplateSelected(entityId, "active");
     const isInactiveTemplate = this._isTemplateSelected(entityId, "inactive");
     const iconLabelPosition =
@@ -2294,10 +2294,10 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
 
   _renderColorPicker(label, configKey, defaultValue) {
     const computedDefaultValue =
-      UltraVehicleCardEditor._getComputedColor(defaultValue);
+      UltraLawnMowerCardEditor._getComputedColor(defaultValue);
     const currentColor = this.config[configKey] || computedDefaultValue;
     const computedBgColor =
-      UltraVehicleCardEditor._getComputedColor(currentColor);
+      UltraLawnMowerCardEditor._getComputedColor(currentColor);
     const textColor = this._getContrastYIQ(computedBgColor);
 
     return html`
@@ -2982,7 +2982,7 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
   _getContrastColor(color) {
     // If it's a CSS variable, get the computed color
     if (color.startsWith("var(")) {
-      color = UltraVehicleCardEditor._getComputedColor(color);
+      color = UltraLawnMowerCardEditor._getComputedColor(color);
     }
 
     // If it's an RGB or RGBA color, convert it to HEX
@@ -3380,9 +3380,9 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
       return customIcon[`${colorType}Color`];
     }
     if (colorType === "active") {
-      return UltraVehicleCardEditor._getComputedColor("--primary-color");
+      return UltraLawnMowerCardEditor._getComputedColor("--primary-color");
     }
-    return UltraVehicleCardEditor._getComputedColor("--primary-text-color");
+    return UltraLawnMowerCardEditor._getComputedColor("--primary-text-color");
   }
 
   // Add this method to hide/show image height inputs
@@ -3849,7 +3849,7 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
   _getContrastColor(color) {
     // If it's a CSS variable, get the computed color
     if (color.startsWith("var(")) {
-      color = UltraVehicleCardEditor._getComputedColor(color);
+      color = UltraLawnMowerCardEditor._getComputedColor(color);
     }
 
     // If it's an RGB or RGBA color, convert it to HEX
@@ -3913,4 +3913,4 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
     );
   }
 }
-customElements.define("ultra-lawnmower-card-editor", UltraVehicleCardEditor);
+customElements.define("ultra-lawnmower-card-editor", UltraLawnMowerCardEditor);

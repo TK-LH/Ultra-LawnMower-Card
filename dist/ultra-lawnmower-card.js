@@ -15,7 +15,7 @@ const {
   isEngineOn,
 } = sensorModule;
 
-const UltraVehicleCardEditor = await import(
+const UltraLawnMowerCardEditor = await import(
   "./ultra-lawnmower-card-editor.js?v=" + version
 );
 const stl = await import("./styles.js?v=" + version);
@@ -23,7 +23,7 @@ const loc = await import("./localize.js?v=" + version);
 const styles = stl.styles;
 const localize = loc.localize;
 
-class UltraVehicleCard extends localize(LitElement) {
+class UltraLawnMowerCard extends localize(LitElement) {
   static get properties() {
     return {
       hass: { type: Object },
@@ -1117,7 +1117,7 @@ class UltraVehicleCard extends localize(LitElement) {
     e.target.style.display = "none";
   }
 
-  // Add this method to the UltraVehicleCard class
+  // Add this method to the UltraLawnMowerCard class
   _handleMoreInfo(entityId) {
     if (entityId) {
       const event = new CustomEvent("hass-more-info", {
@@ -1378,13 +1378,13 @@ class UltraVehicleCard extends localize(LitElement) {
     if (customIcon) {
       return isActive
         ? customIcon.activeColor ||
-            UltraVehicleCard._getComputedColor("--primary-color")
+            UltraLawnMowerCard._getComputedColor("--primary-color")
         : customIcon.inactiveColor ||
-            UltraVehicleCard._getComputedColor("--primary-text-color");
+            UltraLawnMowerCard._getComputedColor("--primary-text-color");
     }
     return isActive
-      ? UltraVehicleCard._getComputedColor("--primary-color")
-      : UltraVehicleCard._getComputedColor("--primary-text-color");
+      ? UltraLawnMowerCard._getComputedColor("--primary-color")
+      : UltraLawnMowerCard._getComputedColor("--primary-text-color");
   }
 
   static _getComputedColor(variable) {
@@ -1777,7 +1777,7 @@ class UltraVehicleCard extends localize(LitElement) {
   }
 }
 
-customElements.define("ultra-lawnmower-card", UltraVehicleCard);
+customElements.define("ultra-lawnmower-card", UltraLawnMowerCard);
 
 window.customCards = window.customCards || [];
 window.customCards.push({

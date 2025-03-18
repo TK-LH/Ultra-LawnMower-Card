@@ -4,8 +4,8 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 import { until } from "https://unpkg.com/lit-html@1.4.1/directives/until.js?module";
-import { version, setVersion } from "./version.js?v=3";
-setVersion("V1.0.3");
+import { version, setVersion } from "./version.js?v=4";
+setVersion("V1.0.4");
 
 const sensorModule = await import("./sensors.js?v=" + version);
 const {
@@ -16,7 +16,7 @@ const {
 } = sensorModule;
 
 const UltraVehicleCardEditor = await import(
-  "./ultra-vehicle-card-editor.js?v=" + version
+  "./ultra-lawnmower-card-editor.js?v=" + version
 );
 const stl = await import("./styles.js?v=" + version);
 const loc = await import("./localize.js?v=" + version);
@@ -82,7 +82,7 @@ class UltraVehicleCard extends localize(LitElement) {
 
     return html`
       <ha-card
-        class="ultra-vehicle-card ${this.config.layoutType === "double"
+        class="ultra-lawnmower-card ${this.config.layoutType === "double"
           ? "double-column"
           : ""}"
       >
@@ -108,7 +108,7 @@ class UltraVehicleCard extends localize(LitElement) {
 
   _renderDoubleColumnLayout() {
     return html`
-      <div class="ultra-vehicle-card">
+      <div class="ultra-lawnmower-card">
         <div class="double-column-container">
           <div class="top-row">
             <div class="left-column">${this._renderVehicleImage()}</div>
@@ -127,10 +127,10 @@ class UltraVehicleCard extends localize(LitElement) {
   static get styles() {
     return css`
       ${styles}
-      .ultra-vehicle-card {
+      .ultra-lawnmower-card {
         padding: 16px;
       }
-      .ultra-vehicle-card.double-column {
+      .ultra-lawnmower-card.double-column {
         padding: 0;
       }
       .double-column-container {

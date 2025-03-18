@@ -23,7 +23,7 @@ Use this link to directly go to the repository in HACS
 1. Make sure you have [HACS](https://hacs.xyz/) installed in your Home Assistant instance.
 2. Go to HACS > Frontend
 3. Click on the three dots in the top right corner and select "Custom repositories."
-4. Add your repository URL: `https://github.com/WJDDesigns/Ultra-Vehicle-Card` and select the category as "Lovelace."
+4. Add your repository URL: `https://github.com/TK-LH/Ultra-LawnMower-Card` and select the category as "Lovelace."
 5. Click on the "+" button
 6. Search for "Ultra Vehicle Card"
 7. Click Install

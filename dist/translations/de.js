@@ -1,7 +1,7 @@
 export default {
   common: {
     battery: "Batterie",
-    fuel: "Kraftstoff",
+    fuel: "Fortschritt",
     range: "Reichweite",
     charging: "Laden",
     mileage: "Kilometerstand",

@@ -1777,12 +1777,12 @@ class UltraVehicleCard extends localize(LitElement) {
   }
 }
 
-customElements.define("ultra-vehicle-card", UltraVehicleCard);
+customElements.define("ultra-lawnmower-card", UltraVehicleCard);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: "ultra-vehicle-card",
-  name: "Ultra Vehicle Card",
+  type: "ultra-lawnmower-card",
+  name: "Ultra Lawn Mower Card",
   description:
     "A card that displays vehicle information with fuel/charge level, range, location, mileage, and a customizable icon grid.",
   preview: true,

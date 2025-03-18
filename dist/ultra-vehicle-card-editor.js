@@ -3913,4 +3913,4 @@ export class UltraVehicleCardEditor extends localize(LitElement) {
     );
   }
 }
-customElements.define("ultra-vehicle-card-editor", UltraVehicleCardEditor);
+customElements.define("ultra-lawnmower-card-editor", UltraVehicleCardEditor);

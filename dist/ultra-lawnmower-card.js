@@ -4,8 +4,8 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 import { until } from "https://unpkg.com/lit-html@1.4.1/directives/until.js?module";
-import { version, setVersion } from "./version.js?v=1";
-setVersion("V1.0.1");
+import { version, setVersion } from "./version.js?v=2";
+setVersion("V1.0.2");
 
 const sensorModule = await import("./sensors.js?v=" + version);
 const {
@@ -1529,7 +1529,7 @@ class UltraVehicleCard extends localize(LitElement) {
   }
 
   static getConfigElement() {
-    return document.createElement("ultra-vehicle-card-editor");
+    return document.createElement("ultra-lawnmower-card-editor");
   }
 
   static getStubConfig() {

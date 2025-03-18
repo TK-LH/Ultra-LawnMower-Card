@@ -1792,7 +1792,7 @@ window.customCards.push({
 
 // Add this code to log the version in the console with custom styling
 console.info(
-  `%c Ultra Vehicle Card%c  ${version} `,
+  `%c Ultra Lawn Mower Card%c  ${version} `,
   "background-color: #4299D9;color: #fff;padding: 3px 2px 3px 3px;border-radius: 14px 0 0 14px;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)",
   "background-color: #4299D9;color: #fff;padding: 3px 3px 3px 2px;border-radius: 0 14px 14px 0;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)"
 );
